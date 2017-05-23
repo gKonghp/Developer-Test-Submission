@@ -1,0 +1,69 @@
+body{
+    height: 100%;
+}
+
+.block-header{
+    background: #6CADFF 100%;
+}
+
+.primary-text{
+    font-family: OpenSans;
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.img-container{
+    height: 56px;
+    width: 56px;
+}
+
+.primary-text{
+    font-family: "OpenSans", "Arial";
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.background{
+    height:100%;
+    width: 100%;
+}
+
+.center {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vertical-center {
+    min-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.padd-top-60{
+    padding-top: 60px;
+}
+
+.padd-top-30{
+    padding-top: 60px;
+}
+
+.padd-6{
+    padding: 6px;
+}
+
+.finished{
+    background-color: #cccccc;
+}
+
+.icon-status{
+    width: 26px;
+    height: 27px;
+}
+
+.card{
+    width: 818px;
+    height: 144px;
+}

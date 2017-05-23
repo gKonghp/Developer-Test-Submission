@@ -1,0 +1,48 @@
+<div height="198">
+  <div class=" block-header" ng-include="'./header.html'"></div>
+  <div class="center vertical-center">
+    <div layout="column">
+      <div flex class="center">
+        <md-input-container class="primary-text">
+          <label>Enter task name</label>
+          <input ng-model="tasksCtrl.taskName">
+        </md-input-container>
+        <md-button ng-click="tasksCtrl.startTask_click()" aria-label="Comment">
+          <img src="./assets/img/ic_start.png" class="img-container"/>
+        </md-button>
+      </div>
+    <md-content layout="column" ng-repeat="task in tasksCtrl.tasks" style="width:818px; height:144px">
+      <md-card class="padd-6" ng-class="(task.status == 2)? 'finished':''" class="card">
+        <div layout="row">
+          <div ng-show="task.status == 2">
+            <img src="./assets/img/ic_finish.png" class="padd-6 icon-status"/>
+          </div>
+          <div flex="50">
+            {{task.name}}
+          </div>
+          <div flex>
+            {{task.startTime | time}}
+          </div>
+          <div flex ng-show="task.status==1">
+            <md-button ng-click="tasksCtrl.pause_click(task)">
+              <img src="./assets/img/ic_pause.png" class="img-container"/>
+            </md-button>
+          </div>
+          <div flex ng-show="task.status==0">
+            <md-button ng-click="tasksCtrl.continue_click(task)">
+              <img src="./assets/img/ic_start.png" class="img-container"/>
+            </md-button>
+          </div>
+          <div flex ng-show="task.status!=2">
+            <md-button ng-click="tasksCtrl.finish_click(task)">
+              <img src="./assets/img/ic_finish.png" class="img-container"/>
+            </md-button>
+          </div>
+        </div>
+
+      </md-card>
+      </md-content>
+    </div>
+  </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="block-header background">
+    <div class="padd-top-60" ng-include="'./header.html'"></div>
+    <div class="center vertical-center">
+        <md-input-container class="primary-text">
+            <label>Enter task name</label>
+            <input ng-model="mainCtrl.taskName">
+        </md-input-container>
+        <md-button ng-click="mainCtrl.startTask_click()" aria-label="Comment">
+            <img src="./assets/img/ic_start.png" class="img-container"/>
+        </md-button>
+    </div>
+</div>
